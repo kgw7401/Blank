@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+        <div class="top">
+            <div class="blank_content_create_button">
+                <a href="{% url 'blank_update2' blank.id %}" class="btn btn-primary">
+                    <i class="bi bi-toggle-on"></i>
+                </a>
+            </div>
+            <div class="blank_content_create_button">
+                <a href="{% url 'blank_content_create' blank.id %}" class="btn btn-primary">
+                    <i class="bi bi-plus-square"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                {% for blankcontent in blank.blankcontent.all %}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ blankcontent.refer }}</h5>
+                        {% if not blank.blank_on_off %}
+                        <p class="card-text">{{ blankcontent.memo|linebreaks }}</p>
+                        {% endif %}
+                        <a href="{% url 'blank_content_update' blankcontent.id %}" class="card-link">수정하기</a>
+                        <a href="{% url 'blank_content_delete' blankcontent.id %}" class="card-link">삭제하기</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>  
+    {% endblock %}
+</body>
+</html>

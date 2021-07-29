@@ -1,0 +1,121 @@
+.home {
+    margin-top: 20rem;
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgb(110,148,197);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.dashboard {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.dashboard-header {
+    padding-top: 35px;
+}
+
+.dashboard-header h2 {
+    font-weight: bold;
+    padding-left: 5%;
+    display: inline-block;
+    margin-right: 70%;
+}
+
+.card {
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 2.5%;
+    width: 17rem;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.login_register a {
+    margin-right: 1rem;
+}
+
+.login_form {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10%;
+    height: 100vh;
+}
+
+.login_button {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.register_form{
+    padding-top: 10%;
+    height: 100vh;
+}
+
+.register_button {
+    margin-left: 20rem;
+}
+
+.blank_create_form {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10%;
+    height: 100vh;
+}
+
+.blank_update_form {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10%;
+    height: 100vh;
+}
+
+.blank_delete_form {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10%;
+    height: 100vh;
+}
+
+.top {
+    margin-left: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-switch.form-switch-lg {
+    display: inline-block;
+}
+
+.blank_content_create_button {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+
+.blank_content_create_form {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 1%;
+    height: 100vh;
+}
+
+.blank_content_update_form {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 1%;
+    height: 100vh;
+}

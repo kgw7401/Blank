@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+    <title>Dashboard</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div class="dashboard">
+      <div class="container-fluid">
+        <div class="dashboard-header d-flex mb-3">
+          <h2 class="me-auto p-2">대쉬보드</h2>
+          <div class="p-2">
+            <a class="btn btn-primary" href="{% url 'blank_create' %}">
+              새 백지 추가
+            </a>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          {% for blank in blanks %}
+          <div class="card">
+            <a href="{% url 'blank_detail' blank.id %}"
+              ><img
+                src="{% static 'images/empty_image.png' %}"
+                class="card-img-top"
+                alt="{{ blank.title }}"
+            /></a>
+            <div class="card-body">
+              <h3 class="card-title"><a href="{% url 'blank_detail' blank.id %}">{{ blank.title }}</a></h3>
+              <p class="card-text">{{ blank.description }}</p>
+              <div class="delete text-end">
+                <a
+                  href="{% url 'blank_update' blank.id %}"
+                  class="btn btn-primary"
+                  >수정하기</a
+                >
+                <a
+                  href="{% url 'blank_delete' blank.id %}"
+                  class="btn btn-danger"
+                  >삭제하기</a
+                >
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
